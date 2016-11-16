@@ -15,7 +15,7 @@ namespace Numberguesser
                 Random num = new Random();
                 var raso = num.Next(100);
 
-                Console.WriteLine(raso);
+                //Console.WriteLine(raso);
 
                 Console.WriteLine("Please enter a number between 1 and 100");
 
@@ -23,6 +23,7 @@ namespace Numberguesser
                 var win = false;
 
                 while (counter < 5 && !win)
+                    
                 {
                     var input = int.Parse(Console.ReadLine());
                     
@@ -39,13 +40,14 @@ namespace Numberguesser
                         Console.WriteLine("Winner Winner...Chicken dinner!");
                         win = true;
                     }
-                    
+
                     counter++;
                 }
+                
                 if (counter == 5)
                 {
                     Console.WriteLine();
-                    Console.WriteLine("Sorry, You lost");
+                    Console.WriteLine("Game Over!");
                 }
 
                 Console.ReadLine();
